@@ -20,4 +20,4 @@ This repository invites anyone interested in contributing to the support of stud
 
 ![Form](image/Seconnectform.png)
 
-![E-Mail](image/Seconnectform.png)
+![E-Mail](image/seconnectmail.png)
