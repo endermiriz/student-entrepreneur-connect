@@ -17,6 +17,4 @@ This repository invites anyone interested in contributing to the support of stud
 
 ### Screenshots
 <img src="image/Seconnectform.png" width=50% height=50%>
-
-
-![E-Mail](image/seconnectmail.png)
+<img src="image/seconnectmail.png" width=50% height=50%>
