@@ -16,9 +16,7 @@ This repository invites anyone interested in contributing to the support of stud
 [Gelistiricidestekmarmara.miriz.me](https://gelistiricidestekmarmara.miriz.me/)
 
 ### Screenshots
-{:refdef: style="width: 10px; height: 10px"}
-[![Form](image/Seconnectform.png)](./somelink)
-{: refdef}
+<img src="image/Seconnectform.png" width=50% height=50%>
 
 
 ![E-Mail](image/seconnectmail.png)
