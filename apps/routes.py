@@ -1,6 +1,7 @@
 from apps import app, mail
 from flask import render_template, request
 from flask_mail import Message
+from apps.forms import ContactForm
 import os
 
 
