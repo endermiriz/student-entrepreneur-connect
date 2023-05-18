@@ -9,10 +9,11 @@ mail = Mail()
 def register_extensions(app):
     mail.init_app(app)
 
+
 def create_app(config):
     app.config.from_object(config)
     register_extensions(app)
 
-    from apps import routes # noqa
-    
+    from apps import routes  # noqa
+
     return app
