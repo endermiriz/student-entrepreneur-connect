@@ -1,26 +1,9 @@
-from flask import Flask, render_template, request
-from flask_mail import Mail, Message
+
+from apps import app, mail
+from flask import render_template, request
 from flask_bootstrap import Bootstrap
+from flask_mail import Message
 import os
-from email.mime.application import MIMEApplication
-app = Flask(__name__)
-mail= Mail(app)
-
-app.config['MAIL_SERVER']='smtp.gmail.com' #The SMTP mail server you are using. Examples : smtp.mail.yahoo.com or smtp.gmail.com
-app.config['MAIL_PORT'] = 465 #The SMTP mail server port you are using.
-app.config['MAIL_USERNAME'] = 'Organization Mail Address'
-app.config['MAIL_PASSWORD'] = 'Organization Mail Password'
-app.config['MAIL_USE_TLS'] = False
-app.config['MAIL_USE_SSL'] = True
-app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024 #File size limit.
-mailin = Mail(app)
-
-
-#When the website homepage is opened, the desired HTML is loaded.
-@app.route('/')
-def index():
-   return render_template("contacts.html")
-
 
 
 #Flask route for the POST operation.
@@ -67,7 +50,7 @@ def mailtalebi():
       else:
          pass
 
-      mailin.send(msg)
+      mail.send(msg)
       return "Mail Gönderildi En Kısa Sürede Döneceğiz."
    else:
       pass
@@ -77,5 +60,9 @@ def mailtalebi():
 @app.errorhandler(413)
 def error413(e):
     return "Dosya boyutunuz çok büyük", 413
-if __name__ == '__main__':
-   app.run(debug = True)
+
+
+#When the website homepage is opened, the desired HTML is loaded.
+@app.route('/')
+def index():
+   return render_template("contacts.html")
