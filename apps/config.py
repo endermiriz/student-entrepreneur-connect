@@ -14,4 +14,4 @@ class Config(object):
     MAIL_USE_SSL = os.getenv('MAIL_USE_SSL', True)
     MAX_CONTENT_LENGTH = 10 * 1024 * 1024
     MAIL_TIMEOUT = 120
-    ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/')
+    ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets')
