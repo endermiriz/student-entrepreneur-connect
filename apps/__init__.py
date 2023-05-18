@@ -12,4 +12,7 @@ def register_extensions(app):
 def create_app(config):
     app.config.from_object(config)
     register_extensions(app)
+
+    from apps import routes # noqa
+    
     return app
