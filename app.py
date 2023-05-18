@@ -5,4 +5,6 @@ app = create_app(Config)
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Debug mode can be controlled in .env with
+    # FLASK_DEBUG variable.
+    app.run()
